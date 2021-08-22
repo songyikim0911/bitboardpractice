@@ -29,6 +29,19 @@ public class UploadController extends HttpServlet {
 
     Collection<Part> parts = request.getParts();
 
+    parts.forEach(part -> {
+
+        String type = part.getContentType();
+        if(type == null){
+            log.info("partName"+part.getName());
+            return;
+        }
+        String fileName = part.getSubmittedFileName();
+
+        String uploadFileName = System.currentTimeMillis()+"_"+fileName;
+
+
+    })
 
     }
 }
