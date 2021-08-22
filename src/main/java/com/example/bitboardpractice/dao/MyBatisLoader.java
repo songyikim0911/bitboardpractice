@@ -9,7 +9,7 @@ import java.io.InputStream;
 public enum MyBatisLoader {
 
     INSTANCE;
-    //mybatisloader.instance.getfactory.opensession으로 사용예정
+    ////mybatisloader.instance.getfactory.opensession으로 사용예정
 
     private SqlSessionFactory sqlSessionFactory;
 
@@ -24,9 +24,6 @@ public enum MyBatisLoader {
 
     }
 
-
-    public SqlSessionFactory getFactory(){
-        return this.sqlSessionFactory;
-    }
+    public SqlSessionFactory getFactory(){ return this.sqlSessionFactory; }
 
 }
