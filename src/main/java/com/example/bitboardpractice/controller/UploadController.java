@@ -6,6 +6,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.Collection;
 
 @Log4j2
 @WebServlet(name = "UploadController", value = "/upload")
@@ -22,6 +23,11 @@ public class UploadController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+    String uploadFolder = "C:\\upload";
+    byte[] buffer = new byte[1024*8];
+
+
+    Collection<Part> parts = request.getParts();
 
 
     }
