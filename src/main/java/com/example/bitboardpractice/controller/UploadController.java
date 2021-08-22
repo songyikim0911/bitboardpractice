@@ -5,7 +5,7 @@ import lombok.extern.log4j.Log4j2;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
-import java.io.IOException;
+import java.io.*;
 import java.util.Collection;
 
 @Log4j2
@@ -39,6 +39,15 @@ public class UploadController extends HttpServlet {
         String fileName = part.getSubmittedFileName();
 
         String uploadFileName = System.currentTimeMillis()+"_"+fileName;
+        log.info(fileName);
+
+          try(InputStream in = part.getInputStream();
+             OutputStream fos = new FileOutputStream(uploadFolder+ File.separator+ uploadFileName);
+        ){
+              while(true){
+                  int count = in.read(buffer);
+              }
+          }
 
 
     })
