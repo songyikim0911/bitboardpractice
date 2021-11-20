@@ -1,5 +1,8 @@
 package com.example.bitboardpractice.dao;
 
+import com.example.bitboardpractice.dto.AttachDTO;
+import com.example.bitboardpractice.dto.BoardDTO;
+import com.example.bitboardpractice.dto.PageDTO;
 import lombok.extern.log4j.Log4j2;
 import org.apache.ibatis.session.SqlSession;
 
