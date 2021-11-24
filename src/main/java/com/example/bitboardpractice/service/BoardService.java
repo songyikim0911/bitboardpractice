@@ -10,7 +10,7 @@ import java.util.List;
 @Log4j2
 public enum BoardService {
 
-    INSTATNCE;
+    INSTANCE;
 
 
     public Integer register(BoardDTO boardDTO) throws RuntimeException{
