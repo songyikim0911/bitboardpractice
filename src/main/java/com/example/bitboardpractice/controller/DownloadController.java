@@ -1,4 +1,4 @@
-package org.zerock.bitboard.controller;
+package com.example.bitboardpractice.controller;
 
 import lombok.extern.log4j.Log4j2;
 
